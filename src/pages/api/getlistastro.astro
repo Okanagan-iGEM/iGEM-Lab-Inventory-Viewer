@@ -1,0 +1,27 @@
+---
+// Get the inventory stuff
+export const partial = true;
+import { turso } from '../../turso';
+import type { InventoryItem } from '../../types/dbTypes';
+
+const res = await turso.execute('SELECT * FROM inventory;');
+const rows = res.rows as unknown as InventoryItem[];
+---
+
+<div>
+	{['a', 'b', 'c']}
+</div>
+
+{['a', 'b', 'c'].map(row => <div>{row}</div>)}
+
+{
+	// Table start
+}
+
+{rows.map(row => <div>{Object.values(row).join(' - ')}</div>)}
+
+{
+	// Table end
+	// row.id
+	// row.itemcode
+}
