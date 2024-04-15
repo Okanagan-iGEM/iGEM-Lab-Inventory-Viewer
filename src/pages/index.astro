@@ -25,10 +25,9 @@ import Card from '../components/Card.astro';
 					<th class="border border-slate-800 bg-slate-300">location</th>
 					<th class="border border-slate-800 bg-slate-300">category</th>
 					<th class="border border-slate-800 bg-slate-300">description</th>
-					
 				</tr>	
 			</thead>
-			<tbody hx-get="/api/getlist" hx-trigger="load">
+			<tbody hx-get="/api/getlistastro" hx-trigger="load">
 			</tbody>
 		</table>
 		<div class="flex w-full justify-center items-center h-32">
