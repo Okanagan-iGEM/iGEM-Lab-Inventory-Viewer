@@ -28,18 +28,7 @@ import Card from '../components/Card.astro';
 					
 				</tr>	
 			</thead>
-				<tr>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-					<td class="border border-slate-800">data</td>
-				</tr>
-			<tbody>
+			<tbody hx-get="/api/getlist" hx-trigger="load">
 			</tbody>
 		</table>
 		<div class="flex w-full justify-center items-center h-32">
